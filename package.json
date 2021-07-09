@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-demo",
+  "version": "1.0.0",
+  "description": "Best practices masterclass",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "sass -w --load-path=node_modules src/scss/style.scss:dist/style.css --style=compressed"
+  },
+  "author": "Scott Mason Nash",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "1.35.1",
+    "vanilla-framework": "2.32.0"
+  }
+}

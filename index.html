@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/style.css">
+
+    <title>Vanilla best practices</title>
+  </head>
+
+  <body>
+    <header id="navigation" class="p-navigation">
+      <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+          <div class="p-navigation__logo">
+            <a class="p-navigation__item" href="#">
+              <img class="p-navigation__image" src="https://assets.ubuntu.com/v1/2eec3fd9-logo.svg" alt="Canonical" width="95">
+            </a>
+          </div>
+          
+          <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+          <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+        </div>
+        
+        <nav class="p-navigation__nav" aria-label="Example main navigation">          
+          <ul class="p-navigation__items">
+            <li class="p-navigation__item is-selected">
+              <a class="p-navigation__link" href="/products">Products</a>
+            </li>
+            <li class="p-navigation__item">
+              <a class="p-navigation__link" href="/services">Services</a>
+            </li>
+            <li class="p-navigation__item">
+              <a class="p-navigation__link" href="/partners">Partners</a>
+            </li>
+            <li class="p-navigation__link">
+              <a class="p-navigation__link" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="u-fixed-width">
+      <h1>Best practices</h1>
+
+      <h2>Tabs</h2>
+
+      <div class="p-tabs">
+        <div class="p-tabs__list" role="tablist" aria-label="Juju technology">
+          <div class="p-tabs__item">
+            <button class="p-tabs__link" role="tab" aria-selected="true" aria-controls="olm-tab" id="olm">Charmed Operator Lifecycle Manager</button>
+          </div>
+          <div class="p-tabs__item">
+            <button class="p-tabs__link" role="tab" aria-selected="false" aria-controls="operator-tab" id="operator" tabindex="-1">Charmed Operator SDK</button>
+          </div>
+          <div class="p-tabs__item">
+            <button class="p-tabs__link" role="tab" aria-selected="false" aria-controls="charmhub-tab" id="charmhub" tabindex="-1">Charmhub</button>
+          </div>
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="olm-tab" aria-labelledby="olm">
+          <p>A system to help you move from configuration management to application management across your hybrid cloud estate - through sharable, reusable, tiny applications called Charmed Operators.</p>
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="operator-tab" aria-labelledby="operator" hidden="hidden">
+          <p>A set of tools to help you write Charmed Operators and to package them as Charms.</p>
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="charmhub-tab" aria-labelledby="complex" hidden="hidden">
+          <p>A repository for charms - from Observability to Data to Identity and more.</p>
+        </div>
+      </div>
+
+      <h2>Ticked list</h2>
+
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Hardware guidance and sizing</li>
+        <li class="p-list__item is-ticked">Fixed-price deployment</li>
+        <li class="p-list__item is-ticked">Reference architecture</li>
+      </ul>
+
+      <h2>Base table</h2>
+
+      <table aria-label="Vanilla framework table example">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Foundation Cloud</th>
+            <th>Foundation Cloud Plus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Expert delivery of an Ubuntu OpenStack cloud</th>
+            <td>Reference architecture</td>
+            <td>Custom architecture</td>
+          </tr>
+          <tr>
+            <th>Workshop and training</th>
+            <td>2-days</td>
+            <td>4-days</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>One-time price</th>
+            <td>$75,000</td>
+            <td>$150,000</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2>Code snippet</h2>
+      
+      <div class="p-code-snippet">
+        <div class="p-code-snippet__header">
+          <h5 class="p-code-snippet__title">Check you have snap installed</h5>
+        </div>
+
+        <pre class="p-code-snippet__block"><code>snap --version</code></pre>
+
+        <div class="p-code-snippet__header">
+          <h5 class="p-code-snippet__title">Output</h5>
+        </div>
+
+        <pre class="p-code-snippet__block"><code>snap    2.39.3
+snapd   2.39.3
+series  16
+ubuntu  18.04
+kernel  5.0.0-36-generic</code></pre>
+      </div>
+
+      <h2>Buttons</h2>
+
+      <button class="p-button--positive">Positive button</button>
+      <button class="p-button--negative">Negative button</button>
+    </div>
+  </body>
+</html>
